@@ -45,6 +45,7 @@
   document.querySelectorAll("[data-link]").forEach(a => {
     const url = linkler[a.dataset.link];
     if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+    else if (a.dataset.link === "trendyol") { a.hidden = true; }   // askıdaki mağaza hiç görünmesin
     else {
       a.removeAttribute("href");
       a.classList.add("pasif");

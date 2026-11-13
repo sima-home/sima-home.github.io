@@ -18,7 +18,8 @@
 
   /* Yazı tipleri */
   --f-el: 'Great Vibes', 'Brush Script MT', cursive;
-  --f-baslik: 'Tenor Sans', 'Segoe UI', sans-serif;
+  --f-baslik: 'Cormorant Garamond', Georgia, serif;          /* başlıklar */
+  --f-etiket: 'Montserrat', 'Segoe UI', system-ui, sans-serif; /* menü, düğme, küçük etiketler */
   --f-slogan: 'Cormorant Garamond', Georgia, serif;
   --f-metin: 'Jost', 'Segoe UI', system-ui, sans-serif;
 
@@ -27,6 +28,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
@@ -86,28 +88,28 @@ p { margin: 0; }
 .marka { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .marka img { border-radius: 50%; }
 .marka-ad { font-family: var(--f-el); font-size: 1.9rem; line-height: 1; color: var(--altin); }
-.marka-ad span { font-family: var(--f-baslik); font-size: .7rem; letter-spacing: .35em; margin-left: 4px; vertical-align: middle; }
+.marka-ad span { font-family: var(--f-etiket); font-size: .66rem; letter-spacing: .35em; margin-left: 4px; vertical-align: middle; }
 .menu { display: flex; gap: 28px; }
-.menu a { font-family: var(--f-baslik); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--altin); padding: 6px 0; border-bottom: 1px solid transparent; }
+.menu a { font-family: var(--f-etiket); font-weight: 500; font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--altin); padding: 6px 0; border-bottom: 1px solid transparent; }
 .menu a:hover { border-bottom-color: var(--altin); }
-.menu-dugme { display: none; font: 400 .8rem var(--f-baslik); letter-spacing: .14em; text-transform: uppercase; color: var(--altin); background: none; border: 1px solid var(--cizgi); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+.menu-dugme { display: none; font: 500 .74rem var(--f-etiket); letter-spacing: .14em; text-transform: uppercase; color: var(--altin); background: none; border: 1px solid var(--cizgi); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
 
 /* ---------- Karşılama ---------- */
 .hero { padding-block: clamp(48px, 9vw, 110px) clamp(56px, 9vw, 120px); text-align: center; border-bottom: 1px solid var(--cizgi); }
 .hero-ic { display: grid; justify-items: center; gap: 22px; }
 .hero-logo { width: min(420px, 82%); }
-.hero h1 { font-family: var(--f-baslik); font-size: clamp(1.7rem, 4.4vw, 2.9rem); line-height: 1.2; letter-spacing: .02em; margin-top: 8px; }
+.hero h1 { font-family: var(--f-baslik); font-weight: 500; font-size: clamp(2.1rem, 5.4vw, 3.6rem); line-height: 1.1; letter-spacing: .01em; margin-top: 8px; }
 .hero-alt { max-width: 56ch; color: var(--yazi); }
 .cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px; }
 .rozetler { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; }
-.rozetler li { font-family: var(--f-baslik); font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--altin); display: flex; align-items: center; gap: 10px; }
+.rozetler li { font-family: var(--f-etiket); font-weight: 500; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--altin); display: flex; align-items: center; gap: 10px; }
 .rozetler li + li::before { content: ""; width: 5px; height: 5px; background: var(--altin); transform: rotate(45deg); margin-right: 16px; }
 
 /* ---------- Düğmeler ---------- */
 .dugme {
   display: inline-flex; align-items: center; justify-content: center;
   min-height: 48px; padding: 12px 26px;
-  font-family: var(--f-baslik); font-size: .85rem; letter-spacing: .12em; text-transform: uppercase;
+  font-family: var(--f-etiket); font-weight: 500; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
   color: var(--altin-acik); text-decoration: none;
   border: 1px solid var(--altin); border-radius: 999px;
   transition: background-color .2s, color .2s;
@@ -120,9 +122,9 @@ p { margin: 0; }
 .bolum { padding-block: clamp(64px, 9vw, 112px); border-bottom: 1px solid var(--cizgi); }
 .bolum > .kap { display: grid; gap: 18px; }
 .el-yazisi { font-family: var(--f-el); font-size: clamp(1.8rem, 3.6vw, 2.4rem); line-height: 1; color: var(--altin); }
-.bolum h2 { font-family: var(--f-baslik); font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.2; letter-spacing: .02em; }
+.bolum h2 { font-family: var(--f-baslik); font-weight: 500; font-size: clamp(2rem, 4.4vw, 3rem); line-height: 1.1; letter-spacing: .01em; }
 .giris { max-width: 62ch; }
-.bolum h3 { font-family: var(--f-baslik); font-size: 1.1rem; letter-spacing: .06em; color: var(--altin-acik); }
+.bolum h3 { font-family: var(--f-baslik); font-weight: 600; font-size: 1.45rem; line-height: 1.2; letter-spacing: .01em; color: var(--altin-acik); }
 
 /* Ürün kartları */
 .urun-izgara { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
@@ -136,7 +138,7 @@ p { margin: 0; }
 .urun svg .nokta { fill: var(--altin); stroke: none; }
 .urun p { font-size: .98rem; }
 .urun-ozel { border-style: dashed; }
-.metin-link { font-family: var(--f-baslik); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; margin-top: 4px; }
+.metin-link { font-family: var(--f-etiket); font-weight: 500; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; margin-top: 4px; }
 
 /* Neden */
 .neden-izgara { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 18px; border-top: 1px solid var(--cizgi); }
@@ -150,17 +152,17 @@ p { margin: 0; }
   content: counter(adim);
   position: absolute; top: 0; left: 0;
   width: 46px; height: 46px; display: grid; place-items: center;
-  font-family: var(--f-baslik); font-size: 1.1rem; color: var(--altin-acik);
+  font-family: var(--f-baslik); font-weight: 600; font-size: 1.4rem; color: var(--altin-acik);
   border: 1px solid var(--altin); border-radius: 50%;
 }
 .adimlar li:not(:last-child)::after { content: ""; position: absolute; top: 23px; left: 58px; right: -4px; height: 1px; background: var(--cizgi); }
 .adimlar p { font-size: .98rem; }
 
 /* Online mağazalar */
-.pazar-izgara { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+.pazar-izgara { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 18px; }
 .pazar { display: grid; gap: 6px; padding: 28px 26px; border: 1px solid var(--altin); border-radius: 4px; text-decoration: none; background: rgba(0, 0, 0, .12); transition: background-color .2s; }
 .pazar[href]:hover { background: rgba(209, 174, 108, .1); }
-.pazar-ad { font-family: var(--f-baslik); font-size: 1.4rem; letter-spacing: .06em; color: var(--altin-acik); }
+.pazar-ad { font-family: var(--f-baslik); font-weight: 600; font-size: 1.8rem; line-height: 1.1; color: var(--altin-acik); }
 .pazar-alt { font-size: .95rem; color: var(--yazi); }
 .pazar.pasif { border-color: var(--cizgi); opacity: .75; }
 
@@ -168,7 +170,7 @@ p { margin: 0; }
 .iletisim-izgara { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; margin-top: 18px; align-items: start; }
 .bilgiler { margin: 0; display: grid; border-top: 1px solid var(--cizgi); }
 .bilgiler > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--cizgi); }
-.bilgiler dt { font-family: var(--f-baslik); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--altin); padding-top: 3px; }
+.bilgiler dt { font-family: var(--f-etiket); font-weight: 500; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--altin); padding-top: 3px; }
 .bilgiler dd { margin: 0; color: var(--altin-acik); overflow-wrap: anywhere; }
 .bilgiler a { text-decoration: none; }
 .eksik { color: var(--yazi-soluk) !important; font-style: italic; }
