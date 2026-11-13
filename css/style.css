@@ -160,17 +160,21 @@ p { margin: 0; }
 
 /* Online mağazalar */
 .pazar-izgara { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 18px; }
-.pazar { display: grid; gap: 6px; padding: 28px 26px; border: 1px solid var(--altin); border-radius: 4px; text-decoration: none; background: rgba(0, 0, 0, .12); transition: background-color .2s; }
+.pazar { display: grid; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: 4px 18px; padding: 26px 24px; border: 1px solid var(--altin); border-radius: 4px; text-decoration: none; background: rgba(0, 0, 0, .12); transition: background-color .2s; }
 .pazar[href]:hover { background: rgba(209, 174, 108, .1); }
 .pazar-ad { font-family: var(--f-baslik); font-weight: 600; font-size: 1.8rem; line-height: 1.1; color: var(--altin-acik); }
 .pazar-alt { font-size: .95rem; color: var(--yazi); }
 .pazar.pasif { border-color: var(--cizgi); opacity: .75; }
+.pazar-logo { grid-row: span 2; width: 48px; height: 48px; fill: none; stroke: var(--altin); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.pazar-logo .dolu-nokta { fill: var(--altin); stroke: none; }
+.pazar-ad, .pazar-alt { grid-column: 2; }
 
 /* İletişim */
 .iletisim-izgara { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; margin-top: 18px; align-items: start; }
 .bilgiler { margin: 0; display: grid; border-top: 1px solid var(--cizgi); }
 .bilgiler > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--cizgi); }
-.bilgiler dt { font-family: var(--f-etiket); font-weight: 500; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--altin); padding-top: 3px; }
+.bilgiler dt svg { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--altin); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.bilgiler dt { display: flex; align-items: flex-start; gap: 10px; font-family: var(--f-etiket); font-weight: 500; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--altin); padding-top: 3px; }
 .bilgiler dd { margin: 0; color: var(--altin-acik); overflow-wrap: anywhere; }
 .bilgiler a { text-decoration: none; }
 .eksik { color: var(--yazi-soluk) !important; font-style: italic; }
@@ -180,7 +184,7 @@ p { margin: 0; }
 .alt { background: var(--gece); padding-block: 40px 96px; }
 .alt-ic { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
 .alt img { width: 150px; }
-.alt p { font-size: .9rem; color: var(--yazi-soluk); }
+.alt p { font-size: .9rem; color: var(--yazi-soluk); padding-right: 76px; }  /* sabit WhatsApp düğmesinin altında kalmasın */
 
 /* Sabit WhatsApp düğmesi */
 .wa-sabit {
