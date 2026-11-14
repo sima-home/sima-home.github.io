@@ -29,6 +29,7 @@
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
+button { font-family: inherit; color: inherit; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
@@ -176,6 +177,34 @@ p { margin: 0; }
 .lb-onceki { left: max(16px, env(safe-area-inset-left, 0px)); top: 50%; transform: translateY(-50%); }
 .lb-sonraki { right: max(16px, env(safe-area-inset-right, 0px)); top: 50%; transform: translateY(-50%); }
 
+/* Uygulama örnekleri (oda görselleri) */
+.oda-izgara { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 12px; }
+.oda { margin: 0; display: grid; gap: 10px; }
+.oda-gorsel { display: block; padding: 0; border: 1px solid var(--cizgi); border-radius: 4px; overflow: hidden; background: var(--gece); cursor: zoom-in; }
+.oda-gorsel img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .5s; }
+.oda-gorsel:hover img { transform: scale(1.03); }
+.oda figcaption { font-size: .95rem; color: var(--yazi); }
+.oda figcaption strong { display: block; font-family: var(--f-baslik); font-weight: 600; font-size: 1.3rem; color: var(--altin-acik); }
+.kucuk-not { font-size: .85rem; color: var(--yazi-soluk); max-width: 70ch; margin-top: 8px; }
+
+/* Renk kartelası */
+#kartela-icerik { margin-top: 14px; }
+.model-izgara { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.model { display: grid; gap: 8px; align-content: start; }
+.model-gorsel { display: grid; grid-template-columns: minmax(0, 1fr) 30%; grid-template-rows: 100%; gap: 6px; aspect-ratio: 1 / 1.1; padding: 0; background: none; border: 0; cursor: zoom-in; }
+.model-gorsel img { width: 100%; height: 100%; min-height: 0; object-fit: cover; border: 1px solid var(--cizgi); border-radius: 4px; }
+.model-gorsel .serit { object-position: top; }
+.model p { font-size: .95rem; }
+.seri { display: grid; gap: 6px; padding-block: 18px; border-top: 1px solid var(--cizgi); }
+.seri:first-child { border-top: 0; padding-top: 0; }
+.renk-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 12px; margin-top: 8px; }
+.renk { display: grid; gap: 6px; padding: 0; background: none; border: 0; cursor: zoom-in; text-align: left; }
+.renk img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid var(--cizgi); border-radius: 4px; transition: border-color .2s; }
+.renk:hover img { border-color: var(--altin); }
+.renk span { font-size: .85rem; color: var(--altin-acik); line-height: 1.3; }
+.etek { padding: 0; border: 1px solid var(--cizgi); border-radius: 4px; overflow: hidden; background: #fff; cursor: zoom-in; max-width: 420px; }
+.etek img { width: 100%; }
+
 /* Mağaza vitrin fotoğrafı */
 .vitrin { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--cizgi); border-radius: 4px; }
 
@@ -241,6 +270,7 @@ p { margin: 0; }
 @media (max-width: 960px) {
   .urun-izgara { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .galeri-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .oda-izgara, .model-izgara { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .adimlar { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .adimlar li { padding: 4px 0 26px 66px; }
   .adimlar li:not(:last-child)::after { top: 52px; bottom: 4px; left: 23px; right: auto; width: 1px; height: auto; }
@@ -262,6 +292,10 @@ p { margin: 0; }
   .menu a { padding: 14px 0; border-bottom: 1px solid var(--cizgi); }
   .pazar-izgara { grid-template-columns: minmax(0, 1fr); }
   .galeri-izgara { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .oda-izgara { gap: 10px; }
+  .oda figcaption strong { font-size: 1.1rem; }
+  .model-izgara { grid-template-columns: minmax(0, 1fr); }
+  .renk-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .lb-onceki, .lb-sonraki { top: auto; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: none; }
   .bilgiler > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
 }

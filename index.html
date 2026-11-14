@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&family=Montserrat:wght@400;500&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
   <a class="atla" href="#icerik">İçeriğe geç</a>
@@ -34,7 +34,8 @@
       <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
       <nav id="menu" class="menu" aria-label="Ana menü">
         <a href="#urunler">Ürünler</a>
-        <a href="#galeri">Galeri</a>
+        <a href="#uygulamalar">Uygulamalar</a>
+        <a href="#renkler">Renkler</a>
         <a href="#nasil">Nasıl Çalışırız</a>
         <a href="#online"><span lang="en">Online</span> Mağaza</a>
         <a href="#iletisim">İletişim</a>
@@ -85,7 +86,7 @@
             <h3>Stor</h3>
             <p>Yukarı sarılarak açılan tek parça, sade ve pratik perde. Mutfak, ofis ve çocuk odası için.</p>
           </article>
-          <article class="urun">
+          <article class="urun" data-kat="zebra">
             <svg viewBox="0 0 64 64" aria-hidden="true"><path class="kalin" d="M10 8h44"/><rect x="13" y="8" width="38" height="48"/><path class="dolgu-dz" d="M13 14h38v6H13zM13 28h38v6H13zM13 42h38v6H13z"/></svg>
             <h3>Zebra</h3>
             <p>Şeffaf ve opak şeritleri kaydırarak içeri ne kadar ışık gireceğini siz seçersiniz.</p>
@@ -115,12 +116,34 @@
       </div>
     </section>
 
+    <!-- UYGULAMA ÖRNEKLERİ: js/kartela.js'teki "odalar" listesinden çizilir -->
+    <section id="uygulamalar" class="bolum kadife">
+      <div class="kap">
+        <p class="el-yazisi">Odanızda nasıl durur?</p>
+        <h2 class="folyo">Uygulama örnekleri</h2>
+        <p class="giris">Her ürünümüzü farklı bir odada, kendi kumaşlarımızla gösterdik. Fotoğrafa dokunun, büyüsün.</p>
+        <div class="oda-izgara" id="oda-izgara"></div>
+        <p class="kucuk-not">Bu görseller, mağazamızdaki gerçek kumaşların fotoğrafları kullanılarak yapay zekâ ile hazırlanmış uygulama örnekleridir. Gerçek renk ve dokuyu mağazamızda görebilirsiniz.</p>
+      </div>
+    </section>
+
+    <!-- RENK KARTELASI: js/kartela.js (araclar/kartela-hazirla.py üretir) -->
+    <section id="renkler" class="bolum">
+      <div class="kap">
+        <p class="el-yazisi">Renk kartelası</p>
+        <h2 class="folyo">Renk ve model seçenekleri</h2>
+        <p class="giris">Kumaşlarımızın yakın çekimleri ve renk kartelaları. Görsele dokunun, büyüsün. Burada gördüklerinizden çok daha fazlası mağazamızda.</p>
+        <div class="filtre" id="kartela-sekme" role="tablist" aria-label="Ürün seçin"></div>
+        <div id="kartela-icerik"></div>
+      </div>
+    </section>
+
     <!-- GALERİ: fotoğraflar js/fotolar.js'ten gelir (araclar/fotograf-hazirla.py üretir) -->
     <section id="galeri" class="bolum">
       <div class="kap">
         <p class="el-yazisi">Mağazamızdan</p>
-        <h2 class="folyo">Kumaşlarımızı yakından görün</h2>
-        <p class="giris">Mağazamızdaki kumaş kartelalarından ve uygulamalarımızdan bir seçki. Fotoğrafa dokunun, büyüsün. Çok daha fazlası mağazamızda sizi bekliyor.</p>
+        <h2 class="folyo">Mağazamız ve tüllerimiz</h2>
+        <p class="giris">Uşak'taki mağazamızdan ve tül koleksiyonumuzdan fotoğraflar. Fotoğrafa dokunun, büyüsün.</p>
         <div class="filtre" id="galeri-filtre" role="group" aria-label="Galeriyi filtrele"></div>
         <div class="galeri-izgara" id="galeri-izgara"></div>
       </div>
@@ -235,7 +258,10 @@
 
   <script src="js/ayarlar.js?v=2"></script>
   <script src="js/main.js?v=2"></script>
-  <script src="js/fotolar.js?v=1"></script>
-  <script src="js/galeri.js?v=1"></script>
+  <script src="js/lightbox.js?v=1"></script>
+  <script src="js/fotolar.js?v=2"></script>
+  <script src="js/galeri.js?v=2"></script>
+  <script src="js/kartela.js?v=1"></script>
+  <script src="js/kartela-ui.js?v=1"></script>
 </body>
 </html>
