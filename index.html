@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&family=Montserrat:wght@400;500&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
   <a class="atla" href="#icerik">İçeriğe geç</a>
@@ -34,6 +34,7 @@
       <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="menu">Menü</button>
       <nav id="menu" class="menu" aria-label="Ana menü">
         <a href="#urunler">Ürünler</a>
+        <a href="#galeri">Galeri</a>
         <a href="#nasil">Nasıl Çalışırız</a>
         <a href="#online"><span lang="en">Online</span> Mağaza</a>
         <a href="#iletisim">İletişim</a>
@@ -69,17 +70,17 @@
         <p class="giris">Salondan mutfağa, yatak odasından ofise kadar her alan için perde seçeneklerimiz var. Kumaşı ve modeli birlikte seçiyor, ölçünüze göre dikiyoruz.</p>
 
         <div class="urun-izgara">
-          <article class="urun">
+          <article class="urun" data-kat="tul">
             <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 58V24a18 18 0 0 1 36 0v34"/><path class="ince" d="M24 10v48M32 8v50M40 10v48"/><path d="M8 58h48"/></svg>
             <h3>Tül</h3>
             <p>Işığı yumuşatıp içeriyi ferah ve aydınlık tutan ince perdeler.</p>
           </article>
-          <article class="urun">
+          <article class="urun" data-kat="fon">
             <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 10h52"/><path class="dolgu" d="M12 10c2 16 6 24 10 28-4 6-6 14-8 20h-4V10z"/><path class="dolgu" d="M52 10c-2 16-6 24-10 28 4 6 6 14 8 20h4V10z"/><circle class="nokta" cx="21" cy="38" r="1.8"/><circle class="nokta" cx="43" cy="38" r="1.8"/></svg>
             <h3>Fon</h3>
             <p>Tülün iki yanında odaya renk ve doku katan, kalın dökümlü perdeler.</p>
           </article>
-          <article class="urun">
+          <article class="urun" data-kat="stor">
             <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="8" width="44" height="6" rx="3"/><path class="dolgu" d="M13 14v30h38V14"/><path class="kalin" d="M12 44h40"/><path class="ince" d="M56 14v22"/><circle class="nokta" cx="56" cy="38" r="1.8"/></svg>
             <h3>Stor</h3>
             <p>Yukarı sarılarak açılan tek parça, sade ve pratik perde. Mutfak, ofis ve çocuk odası için.</p>
@@ -94,7 +95,7 @@
             <h3>Jaluzi</h3>
             <p>Yatay lamelleri çevirerek ışığı ve mahremiyeti hassasça ayarlarsınız.</p>
           </article>
-          <article class="urun">
+          <article class="urun" data-kat="gunesslik-karartma">
             <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="49" cy="13" r="5"/><path class="ince" d="M49 3v3M49 20v3M39 13h3M56 13h3M42 6l2 2M54 18l2 2M42 20l2-2M54 8l2-2"/><rect x="8" y="26" width="36" height="32"/><path class="dolgu" d="M8 26h20c-1 10-1 22 0 32H8z"/></svg>
             <h3>Güneşlik ve Karartma</h3>
             <p>Saten güneşlik ve ışığı tamamen kesen karartma (blackout) perdeler. Yatak odası için ideal.</p>
@@ -113,6 +114,25 @@
         </div>
       </div>
     </section>
+
+    <!-- GALERİ: fotoğraflar js/fotolar.js'ten gelir (araclar/fotograf-hazirla.py üretir) -->
+    <section id="galeri" class="bolum">
+      <div class="kap">
+        <p class="el-yazisi">Mağazamızdan</p>
+        <h2 class="folyo">Kumaşlarımızı yakından görün</h2>
+        <p class="giris">Mağazamızdaki kumaş kartelalarından ve uygulamalarımızdan bir seçki. Fotoğrafa dokunun, büyüsün. Çok daha fazlası mağazamızda sizi bekliyor.</p>
+        <div class="filtre" id="galeri-filtre" role="group" aria-label="Galeriyi filtrele"></div>
+        <div class="galeri-izgara" id="galeri-izgara"></div>
+      </div>
+    </section>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Büyük fotoğraf">
+      <img id="lb-resim" alt="">
+      <p class="lb-yazi" id="lb-yazi"></p>
+      <button type="button" class="lb-dugme lb-kapat" id="lb-kapat" aria-label="Kapat">×</button>
+      <button type="button" class="lb-dugme lb-onceki" id="lb-onceki" aria-label="Önceki fotoğraf">‹</button>
+      <button type="button" class="lb-dugme lb-sonraki" id="lb-sonraki" aria-label="Sonraki fotoğraf">›</button>
+    </dialog>
 
     <!-- NEDEN SİMA HOME -->
     <section class="bolum kadife">
@@ -190,6 +210,7 @@
             <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Çalışma saatleri</dt><dd data-bilgi="saatler"></dd></div>
           </dl>
           <div class="iletisim-cta kadife">
+            <img class="vitrin" src="img/foto/magaza-01-k.webp" alt="Mehmet Topaç Bulvarı'ndaki mağazamızın dış görünümü" width="480" height="640" loading="lazy">
             <p class="el-yazisi">evinizin siması</p>
             <p>Pencerenizin fotoğrafını gönderin, size uygun perdeyi birlikte seçelim.</p>
             <a class="dugme dolu" data-wa href="#">WhatsApp'tan Yazın</a>
@@ -214,5 +235,7 @@
 
   <script src="js/ayarlar.js?v=2"></script>
   <script src="js/main.js?v=2"></script>
+  <script src="js/fotolar.js?v=1"></script>
+  <script src="js/galeri.js?v=1"></script>
 </body>
 </html>
