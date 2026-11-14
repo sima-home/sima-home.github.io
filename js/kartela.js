@@ -6,96 +6,132 @@ window.KARTELA = {
    {
     "ad": "Nüans",
     "aciklama": "Düz renk, mat dokulu fon. Çok geniş renk seçeneği.",
+    "kapak": {
+     "b": "img/kartela/fon-1-kapak.webp",
+     "k": "img/kartela/fon-1-kapak-k.webp",
+     "w": 582,
+     "h": 640
+    },
     "yakin": {
      "b": "img/kartela/fon-1-yakin.webp",
      "k": "img/kartela/fon-1-yakin-k.webp",
-     "w": 420,
+     "w": 451,
      "h": 560
     },
     "kartela": {
      "b": "img/kartela/fon-1-kartela.webp",
      "k": "img/kartela/fon-1-kartela-k.webp",
-     "w": 140,
+     "w": 193,
      "h": 700
     }
    },
    {
     "ad": "Violet",
     "aciklama": "Keten görünümlü, doğal dokulu fon.",
+    "kapak": {
+     "b": "img/kartela/fon-2-kapak.webp",
+     "k": "img/kartela/fon-2-kapak-k.webp",
+     "w": 582,
+     "h": 640
+    },
     "yakin": {
      "b": "img/kartela/fon-2-yakin.webp",
      "k": "img/kartela/fon-2-yakin-k.webp",
-     "w": 420,
+     "w": 484,
      "h": 560
     },
     "kartela": {
      "b": "img/kartela/fon-2-kartela.webp",
      "k": "img/kartela/fon-2-kartela-k.webp",
-     "w": 144,
+     "w": 196,
      "h": 700
     }
    },
    {
     "ad": "Saçaklı Çizgi",
     "aciklama": "Yatay saçak şeritli, dokulu fon.",
+    "kapak": {
+     "b": "img/kartela/fon-3-kapak.webp",
+     "k": "img/kartela/fon-3-kapak-k.webp",
+     "w": 582,
+     "h": 640
+    },
     "yakin": {
      "b": "img/kartela/fon-3-yakin.webp",
      "k": "img/kartela/fon-3-yakin-k.webp",
-     "w": 420,
+     "w": 339,
      "h": 560
     },
     "kartela": {
      "b": "img/kartela/fon-3-kartela.webp",
      "k": "img/kartela/fon-3-kartela-k.webp",
-     "w": 171,
+     "w": 238,
      "h": 700
     }
    },
    {
     "ad": "Zigzag",
     "aciklama": "Kabarık zigzag desenli fon.",
+    "kapak": {
+     "b": "img/kartela/fon-4-kapak.webp",
+     "k": "img/kartela/fon-4-kapak-k.webp",
+     "w": 582,
+     "h": 640
+    },
     "yakin": {
      "b": "img/kartela/fon-4-yakin.webp",
      "k": "img/kartela/fon-4-yakin-k.webp",
-     "w": 420,
+     "w": 397,
      "h": 560
     },
     "kartela": {
      "b": "img/kartela/fon-4-kartela.webp",
      "k": "img/kartela/fon-4-kartela-k.webp",
-     "w": 193,
+     "w": 205,
      "h": 700
     }
    },
    {
     "ad": "Mermer Desen",
     "aciklama": "Mermer damarlı, hafif parlak jakar fon.",
+    "kapak": {
+     "b": "img/kartela/fon-5-kapak.webp",
+     "k": "img/kartela/fon-5-kapak-k.webp",
+     "w": 582,
+     "h": 640
+    },
     "yakin": {
      "b": "img/kartela/fon-5-yakin.webp",
      "k": "img/kartela/fon-5-yakin-k.webp",
-     "w": 420,
+     "w": 363,
      "h": 560
     },
     "kartela": {
      "b": "img/kartela/fon-5-kartela.webp",
      "k": "img/kartela/fon-5-kartela-k.webp",
-     "w": 166,
+     "w": 211,
      "h": 700
     }
    },
    {
     "ad": "İstanbul",
     "aciklama": "Eskitme görünümlü, yumuşak desenli jakar fon.",
+    "kapak": {
+     "b": "img/kartela/fon-6-kapak.webp",
+     "k": "img/kartela/fon-6-kapak-k.webp",
+     "w": 582,
+     "h": 640
+    },
     "yakin": {
      "b": "img/kartela/fon-6-yakin.webp",
      "k": "img/kartela/fon-6-yakin-k.webp",
-     "w": 420,
+     "w": 314,
      "h": 560
     },
     "kartela": {
      "b": "img/kartela/fon-6-kartela.webp",
      "k": "img/kartela/fon-6-kartela-k.webp",
-     "w": 140,
+     "w": 221,
      "h": 700
     }
    }
@@ -212,8 +248,8 @@ window.KARTELA = {
   "etek": {
    "b": "img/kartela/stor-etek-lazer.webp",
    "k": "img/kartela/stor-etek-lazer-k.webp",
-   "w": 485,
-   "h": 560
+   "w": 659,
+   "h": 800
   }
  },
  "zebra": {
@@ -223,133 +259,133 @@ window.KARTELA = {
     "ad": "Bambu Vizon",
     "b": "img/kartela/zebra-01.webp",
     "k": "img/kartela/zebra-01-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Antrasit",
     "b": "img/kartela/zebra-02.webp",
     "k": "img/kartela/zebra-02-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Gri",
     "b": "img/kartela/zebra-03.webp",
     "k": "img/kartela/zebra-03-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Bej Keten",
     "b": "img/kartela/zebra-04.webp",
     "k": "img/kartela/zebra-04-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Koyu Gri Çizgili",
     "b": "img/kartela/zebra-05.webp",
     "k": "img/kartela/zebra-05-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Gri Melanj",
     "b": "img/kartela/zebra-06.webp",
     "k": "img/kartela/zebra-06-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Füme Melanj",
     "b": "img/kartela/zebra-07.webp",
     "k": "img/kartela/zebra-07-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Gri Tüvit",
     "b": "img/kartela/zebra-08.webp",
     "k": "img/kartela/zebra-08-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Gri Mermer",
     "b": "img/kartela/zebra-09.webp",
     "k": "img/kartela/zebra-09-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Gri Çizgi Dokulu",
     "b": "img/kartela/zebra-10.webp",
     "k": "img/kartela/zebra-10-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Altın Simli",
     "b": "img/kartela/zebra-11.webp",
     "k": "img/kartela/zebra-11-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Altın Şeritli",
     "b": "img/kartela/zebra-12.webp",
     "k": "img/kartela/zebra-12-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Bronz",
     "b": "img/kartela/zebra-13.webp",
     "k": "img/kartela/zebra-13-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Damask Pudra",
     "b": "img/kartela/zebra-14.webp",
     "k": "img/kartela/zebra-14-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Damask Turkuaz",
     "b": "img/kartela/zebra-15.webp",
     "k": "img/kartela/zebra-15-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Mint Çizgili",
     "b": "img/kartela/zebra-16.webp",
     "k": "img/kartela/zebra-16-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Fuşya Çizgili",
     "b": "img/kartela/zebra-17.webp",
     "k": "img/kartela/zebra-17-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Kırmızı Siyah Çizgili",
     "b": "img/kartela/zebra-18.webp",
     "k": "img/kartela/zebra-18-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    },
    {
     "ad": "Daire Desenli",
     "b": "img/kartela/zebra-19.webp",
     "k": "img/kartela/zebra-19-k.webp",
-    "w": 267,
+    "w": 300,
     "h": 300
    }
   ],
@@ -361,16 +397,22 @@ window.KARTELA = {
    {
     "ad": "Blackout",
     "aciklama": "Işığı tamamen kesen, kalın karartma kumaşı. Yatak odaları için ideal.",
+    "kapak": {
+     "b": "img/kartela/karartma-kapak.webp",
+     "k": "img/kartela/karartma-kapak-k.webp",
+     "w": 582,
+     "h": 640
+    },
     "yakin": {
      "b": "img/kartela/karartma-yakin.webp",
      "k": "img/kartela/karartma-yakin-k.webp",
-     "w": 420,
-     "h": 560
+     "w": 560,
+     "h": 472
     },
     "kartela": {
      "b": "img/kartela/karartma-kartela.webp",
      "k": "img/kartela/karartma-kartela-k.webp",
-     "w": 154,
+     "w": 209,
      "h": 700
     }
    }

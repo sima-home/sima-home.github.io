@@ -31,13 +31,13 @@
   function modelKartlari(urun) {
     return `<div class="model-izgara">` + K[urun].modeller.map((m, i) => {
       listeler[`${urun}-${i}`] = [
+        { src: m.kapak.b, yazi: `${m.ad} · kumaş ve renk kartelası` },
         { src: m.yakin.b, yazi: `${m.ad} · yakın çekim` },
         { src: m.kartela.b, yazi: `${m.ad} · renk kartelası` }];
       return `
       <article class="model">
         <button type="button" class="model-gorsel" data-liste="${urun}-${i}" aria-label="${m.ad} yakın çekim ve kartelası, büyüt">
-          <img src="${m.yakin.k}" alt="${m.ad} kumaşı yakın çekim" loading="lazy">
-          <img class="serit" src="${m.kartela.k}" alt="${m.ad} renk kartelası" loading="lazy">
+          <img src="${m.kapak.k}" alt="${m.ad} kumaşı yakın çekim ve renk kartelası" loading="lazy" width="${m.kapak.w}" height="${m.kapak.h}">
         </button>
         <h3>${m.ad}</h3>
         <p>${m.aciklama}</p>
@@ -45,9 +45,9 @@
     }).join("") + `</div>`;
   }
 
-  function renkKareleri(anahtar, renkler, onEk) {
+  function renkKareleri(anahtar, renkler, onEk, sinif = "") {
     listeler[anahtar] = renkler.map(r => ({ src: r.b, yazi: `${onEk}${r.ad}` }));
-    return `<div class="renk-izgara">` + renkler.map((r, i) => `
+    return `<div class="renk-izgara ${sinif}">` + renkler.map((r, i) => `
       <button type="button" class="renk" data-liste="${anahtar}" data-i="${i}" aria-label="${onEk}${r.ad}, büyüt">
         <img src="${r.k}" alt="${onEk}${r.ad}" loading="lazy">
         <span>${r.ad}</span>
@@ -61,7 +61,7 @@
       html = K.stor.seriler.map((s, i) => `
         <div class="seri">
           <h3>${s.ad}</h3><p>${s.aciklama}</p>
-          ${renkKareleri(`stor-${i}`, s.renkler, `Stor ${s.ad} · `)}
+          ${renkKareleri(`stor-${i}`, s.renkler, `Stor ${s.ad} · `, "dikey")}
         </div>`).join("");
       if (K.stor.etek) {
         listeler["stor-etek"] = [{ src: K.stor.etek.b, yazi: "Stor etek ve lazer kesim modelleri" }];
