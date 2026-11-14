@@ -187,6 +187,11 @@ window.KARTELA = {
     "aciklama": "Parlamayan, sade yüzeyli stor.",
     "renkler": [
      {
+      "ad": "Beyaz",
+      "k": "img/kartela/stor-mat-stor-beyaz-k.webp",
+      "b": "img/kartela/stor-mat-stor-beyaz.webp"
+     },
+     {
       "ad": "Ekru",
       "k": "img/kartela/stor-mat-stor-ekru-k.webp",
       "b": "img/kartela/stor-mat-stor-ekru.webp"
