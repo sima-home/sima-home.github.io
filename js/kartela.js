@@ -259,134 +259,134 @@ window.KARTELA = {
     "ad": "Bambu Vizon",
     "b": "img/kartela/zebra-01.webp",
     "k": "img/kartela/zebra-01-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Antrasit",
     "b": "img/kartela/zebra-02.webp",
     "k": "img/kartela/zebra-02-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Gri",
     "b": "img/kartela/zebra-03.webp",
     "k": "img/kartela/zebra-03-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Bej Keten",
     "b": "img/kartela/zebra-04.webp",
     "k": "img/kartela/zebra-04-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Koyu Gri Çizgili",
     "b": "img/kartela/zebra-05.webp",
     "k": "img/kartela/zebra-05-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Gri Melanj",
     "b": "img/kartela/zebra-06.webp",
     "k": "img/kartela/zebra-06-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Füme Melanj",
     "b": "img/kartela/zebra-07.webp",
     "k": "img/kartela/zebra-07-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Gri Tüvit",
     "b": "img/kartela/zebra-08.webp",
     "k": "img/kartela/zebra-08-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Gri Mermer",
     "b": "img/kartela/zebra-09.webp",
     "k": "img/kartela/zebra-09-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Gri Çizgi Dokulu",
     "b": "img/kartela/zebra-10.webp",
     "k": "img/kartela/zebra-10-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Altın Simli",
     "b": "img/kartela/zebra-11.webp",
     "k": "img/kartela/zebra-11-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Altın Şeritli",
     "b": "img/kartela/zebra-12.webp",
     "k": "img/kartela/zebra-12-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Bronz",
     "b": "img/kartela/zebra-13.webp",
     "k": "img/kartela/zebra-13-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Damask Pudra",
     "b": "img/kartela/zebra-14.webp",
     "k": "img/kartela/zebra-14-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Damask Turkuaz",
     "b": "img/kartela/zebra-15.webp",
     "k": "img/kartela/zebra-15-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Mint Çizgili",
     "b": "img/kartela/zebra-16.webp",
     "k": "img/kartela/zebra-16-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Fuşya Çizgili",
     "b": "img/kartela/zebra-17.webp",
     "k": "img/kartela/zebra-17-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Kırmızı Siyah Çizgili",
     "b": "img/kartela/zebra-18.webp",
     "k": "img/kartela/zebra-18-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    },
    {
     "ad": "Daire Desenli",
     "b": "img/kartela/zebra-19.webp",
     "k": "img/kartela/zebra-19-k.webp",
-    "w": 300,
-    "h": 300
+    "w": 360,
+    "h": 360
    }
   ],
   "not": "Zebra modelleri video çekiminden alınmıştır; renkler mağazada daha nettir."
