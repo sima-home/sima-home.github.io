@@ -93,6 +93,13 @@ p { margin: 0; }
 .menu { display: flex; gap: 28px; }
 .menu a { font-family: var(--f-etiket); font-weight: 500; font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--altin); padding: 6px 0; border-bottom: 1px solid transparent; }
 .menu a:hover { border-bottom-color: var(--altin); }
+.menu a[aria-current="page"] { color: var(--altin-acik); border-bottom-color: var(--altin); }
+
+/* Sekmeler: her menü başlığı kendi sayfası gibi açılır (js/sekmeler.js) */
+#icerik { min-height: calc(100vh - 230px); }
+[data-sayfa]:not([hidden]) { animation: sekme-gir .35s ease both; }
+@keyframes sekme-gir { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { [data-sayfa]:not([hidden]) { animation: none; } }
 .menu-dugme { display: none; font: 500 .74rem var(--f-etiket); letter-spacing: .14em; text-transform: uppercase; color: var(--altin); background: none; border: 1px solid var(--cizgi); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
 
 /* ---------- Karşılama ---------- */
