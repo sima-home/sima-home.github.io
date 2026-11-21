@@ -54,7 +54,7 @@
     // 1: dışarıdan pencereye · 2: pencereden içeri · 3: odada perdeye · 4: kumaşa yakın
     // Dik ekranda (telefon) görsel zaten kırpık; odada perdeler kadrajdan çıkmasın diye daha az yaklaşılır
     const dik = innerWidth < innerHeight;
-    const hedef = son ? (dik ? 1.15 : 1.3) : (dik ? [2.3, 1.9, 1.12] : [2.5, 2.2, 1.9])[i];
+    const hedef = son ? (dik ? 1.1 : 1.2) : (dik ? [1.7, 1.5, 1.08] : [2.0, 1.75, 1.5])[i];   // ölçülü yakınlaşma: görüntü net kalır
     yol.fromTo(img, { scale: i ? 1.02 : 1 }, { scale: hedef, duration: 1 }, i);
     if (!son) yol.to(katmanlar[i + 1], { opacity: 1, duration: 0.28 }, i + 0.74);
   });
