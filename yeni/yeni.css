@@ -158,6 +158,7 @@ h2 em, .yol-yazi em { display: block; font-family: var(--f-zarif); font-style: i
 /* Telefon / tablet */
 @media (max-width: 900px) {
   .menu { display: none; }
+  .kaydir { display: none; }
   .ust .dugme { margin-left: auto; }
   .sayilar { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 34px; }
   .yatay-baslik { width: 82vw; }

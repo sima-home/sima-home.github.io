@@ -51,7 +51,11 @@
     const img = k.querySelector("img");
     const son = i === katmanlar.length - 1;
     // Her katman pencereye doğru yaklaşır (kamera içeri giriyormuş gibi)
-    yol.fromTo(img, { scale: i ? 1.18 : 1 }, { scale: son ? 1.32 : 2.4, duration: 1 }, i);
+    // 1: dışarıdan pencereye · 2: pencereden içeri · 3: odada perdeye · 4: kumaşa yakın
+    // Dik ekranda (telefon) görsel zaten kırpık; odada perdeler kadrajdan çıkmasın diye daha az yaklaşılır
+    const dik = innerWidth < innerHeight;
+    const hedef = son ? (dik ? 1.15 : 1.3) : (dik ? [2.3, 1.9, 1.12] : [2.5, 2.2, 1.9])[i];
+    yol.fromTo(img, { scale: i ? 1.02 : 1 }, { scale: hedef, duration: 1 }, i);
     if (!son) yol.to(katmanlar[i + 1], { opacity: 1, duration: 0.28 }, i + 0.74);
   });
   yazilar.forEach((y, i) => {
