@@ -90,7 +90,7 @@ h2 em, .yol-yazi em { display: block; font-family: var(--f-zarif); font-style: i
 .yatay-baslik h2 span { font-size: clamp(1.6rem, 3.4vw, 3.6rem); }
 .yatay-baslik h2 em { font-size: clamp(1.8rem, 3.6vw, 3.9rem); }
 .yatay-baslik p:last-child { max-width: 30ch; margin: 22px 0 0; color: var(--yazi); }
-.kart { flex: 0 0 auto; width: clamp(260px, 30vw, 440px); }
+.kart { flex: 0 0 auto; width: clamp(260px, min(31vw, 52vh), 620px); }   /* büyük ekranda iri kart: kumaş dokusu okunur */
 .kart-gorsel { overflow: hidden; aspect-ratio: 3 / 4; border-radius: 2px; }
 .kart-gorsel img { width: 100%; height: 118%; object-fit: cover; }
 .kart-no { margin: 16px 0 2px; font-family: var(--f-genis); font-stretch: 125%; font-weight: 600; font-size: .8rem; letter-spacing: .2em; color: var(--soluk); }
@@ -131,6 +131,8 @@ h2 em, .yol-yazi em { display: block; font-family: var(--f-zarif); font-style: i
 .adim li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 12px; padding: 18px 0; border-top: 1px solid var(--cizgi); }
 .adim b { font-family: var(--f-genis); font-stretch: 125%; font-weight: 600; font-size: .85rem; letter-spacing: .14em; color: var(--soluk); padding-top: 4px; }
 .adim strong { display: block; font-family: var(--f-genis); font-stretch: 118%; font-weight: 700; font-size: 1.05rem; letter-spacing: .04em; text-transform: uppercase; color: var(--altin-acik); }
+
+main { overflow-x: clip; }   /* yandan kayarak giren öğeler sayfayı genişletmesin */
 
 /* 8) Çağrı */
 .cagri { padding: 22vh var(--kenar) 16vh; text-align: center; background: radial-gradient(120% 90% at 50% 0%, var(--bordo) 0%, var(--sarap) 45%, var(--zemin) 100%); }
