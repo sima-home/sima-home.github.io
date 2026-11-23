@@ -124,11 +124,25 @@
     const xGit = gsap.quickTo(onizleme, "x", { duration: 0.55, ease: "power3" });
     const yGit = gsap.quickTo(onizleme, "y", { duration: 0.55, ease: "power3" });
     gsap.set(onizleme, { xPercent: -50, yPercent: -50 });
-    addEventListener("mousemove", e => { xGit(e.clientX + 150); yGit(e.clientY); });
-    document.querySelectorAll(".satirlar a").forEach(a => {
-      a.addEventListener("mouseenter", () => { resim.src = a.dataset.resim; gsap.to(onizleme, { opacity: 1, scale: 1, rotate: -3, duration: 0.45, ease: "power3.out" }); });
-      a.addEventListener("mouseleave", () => gsap.to(onizleme, { opacity: 0, scale: 0.6, rotate: 0, duration: 0.35 }));
-    });
+    // Fareyi oynatmadan tekerlekle kaydırınca satır imlecin altından kayar ama tarayıcı "mouseleave"
+    // göndermez; görsel açık kalıp imlece takılırdı. Bu yüzden her harekette ve her kaydırmada
+    // imlecin altındaki satır yeniden bulunur.
+    let fx = -1, fy = -1, acikSatir = null;
+    const gizle = () => { if (!acikSatir) return; acikSatir = null; gsap.to(onizleme, { opacity: 0, scale: 0.6, rotate: 0, duration: 0.3, overwrite: "auto" }); };
+    const denetle = () => {
+      if (fx < 0) return;
+      const el = document.elementFromPoint(fx, fy);
+      const a = el && el.closest(".satirlar a");
+      if (!a) return gizle();
+      if (a === acikSatir) return;
+      acikSatir = a; resim.src = a.dataset.resim;
+      gsap.to(onizleme, { opacity: 1, scale: 1, rotate: -3, duration: 0.45, ease: "power3.out", overwrite: "auto" });
+    };
+    addEventListener("mousemove", e => { fx = e.clientX; fy = e.clientY; xGit(fx + 150); yGit(fy); denetle(); }, { passive: true });
+    addEventListener("scroll", denetle, { passive: true });
+    if (lenis) lenis.on("scroll", denetle);
+    document.documentElement.addEventListener("mouseleave", () => { fx = -1; gizle(); });   // imleç pencereden çıktı
+    addEventListener("blur", () => { fx = -1; gizle(); });
   }
 
   // ---------------------------------------------------------------- Başlıklar: kelime kelime yükselir
